@@ -57,7 +57,7 @@ export default function Home() {
           <nav aria-label="Social" className="space-y-6">
             <h2 className="text-lg font-bold text-[#283618]">Social</h2>
             <ul className="space-y-4">
-              {['Instagram', 'Linkedin', 'E-mail', 'Whatsapp'].map((item) => (
+              {['Instagram', 'Linkedin', 'contato@trilhafinance.com.br', '+55 (41) 99937-7006'].map((item) => (
                 <li key={item}>
                   <a
                     href="#"
