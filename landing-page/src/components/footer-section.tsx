@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logoFull from "../assets/logos/logo-full.png";
+import logoFull from "../assets/logos/Logo-trilha.png";
 
 export function FooterSection() {
   return (
