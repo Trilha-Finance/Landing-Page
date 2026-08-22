@@ -1,0 +1,59 @@
+import { ChevronIcon } from "./icons";
+
+const FAQS = [
+  {
+    question: "O que a Trilha Finance faz?",
+    answer:
+      "Juntamos duas frentes: finanças tradicionais (planejamento financeiro e wealth planning) e tecnologia (desenvolvimento de software e blockchain).",
+  },
+  {
+    question: "Vocês atendem pessoa física, empresas e o setor público?",
+    answer:
+      "Sim — trabalhamos com B2B, B2C e B2G, adaptando a linguagem e o escopo pra cada tipo de cliente.",
+  },
+  {
+    question: "Vocês também desenvolvem software sob encomenda?",
+    answer:
+      "Sim, a frente de tecnologia cobre desenvolvimento de produtos digitais do primeiro protótipo à operação em produção.",
+  },
+  {
+    question: "A Trilha atua com criptomoedas e blockchain?",
+    answer:
+      "Sim — é uma das nossas frentes principais, com conteúdo técnico e consultoria aplicada ao dia a dia, sem jargão desnecessário.",
+  },
+  {
+    question: "Como faço pra começar?",
+    answer:
+      "É só chamar a gente pelo formulário de contato abaixo — a partir daí entendemos o seu caso e indicamos o próximo passo.",
+  },
+];
+
+export function FaqSection() {
+  return (
+    <section className="mx-auto w-full max-w-[820px] px-6 py-20 sm:px-8">
+      <div className="mx-auto max-w-2xl text-center">
+        <p className="text-sm font-medium uppercase tracking-[0.35em] text-brand-gold">
+          FAQ
+        </p>
+        <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          Tem dúvidas? Relaxa, a gente responde.
+        </h2>
+      </div>
+
+      <div className="mt-12 space-y-3">
+        {FAQS.map((faq) => (
+          <details
+            key={faq.question}
+            className="group rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-5 open:bg-white/[0.05]"
+          >
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-medium text-white marker:content-none">
+              {faq.question}
+              <ChevronIcon className="h-5 w-5 shrink-0 text-white/50 transition-transform duration-200 group-open:rotate-180" />
+            </summary>
+            <p className="mt-4 text-sm leading-6 text-white/60">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  );
+}
