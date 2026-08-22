@@ -4,6 +4,7 @@ import { ContactSection } from "../components/contact-section";
 import { FaqSection } from "../components/faq-section";
 import { FooterSection } from "../components/footer-section";
 import { HeroSection } from "../components/hero-section";
+import { HighlightBannerSection } from "../components/highlight-banner-section";
 import { Navbar } from "../components/navbar";
 import { NewsletterSection } from "../components/newsletter-section";
 import { PillarsSection } from "../components/pillars-section";
@@ -21,6 +22,7 @@ export default function Home() {
       <StatementSection />
       <ApproachSection />
       <ServicesSection />
+      <HighlightBannerSection />
       <TestimonialsSection />
       <SupportSection />
       <FaqSection />

@@ -43,12 +43,23 @@ export function ServicesSection() {
           {SERVICES.map((service) => (
             <div
               key={service.title}
-              className="rounded-3xl border border-white/10 bg-white/[0.03] p-7"
+              className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-7"
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/[0.06] text-brand-gold">
-                <service.icon className="h-5 w-5" />
-              </span>
-              <h3 className="mt-5 text-lg font-semibold text-white">{service.title}</h3>
+              <div className="relative flex h-20 items-center">
+                <div
+                  className="absolute -left-2 -top-2 h-20 w-20 opacity-40"
+                  style={{
+                    backgroundImage:
+                      "radial-gradient(currentColor 1px, transparent 1px)",
+                    backgroundSize: "10px 10px",
+                    color: "var(--color-brand-gold)",
+                  }}
+                />
+                <span className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-gold/15 text-brand-gold">
+                  <service.icon className="h-6 w-6" />
+                </span>
+              </div>
+              <h3 className="mt-4 text-lg font-semibold text-white">{service.title}</h3>
               <p className="mt-3 text-sm leading-6 text-white/60">{service.description}</p>
             </div>
           ))}

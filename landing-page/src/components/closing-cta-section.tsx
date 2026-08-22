@@ -1,7 +1,12 @@
+import { TrailIcon } from "./graphics";
+
 export function ClosingCtaSection() {
   return (
     <section className="mx-auto w-full max-w-[1280px] px-6 pb-20 sm:px-8 lg:px-10">
       <div className="flex flex-col items-center gap-6 rounded-[2.5rem] bg-brand-gold px-8 py-16 text-center sm:px-16">
+        <span className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-deep/10 text-brand-deep">
+          <TrailIcon className="h-8 w-8" />
+        </span>
         <h2 className="max-w-xl text-3xl font-bold tracking-tight text-brand-deep sm:text-4xl">
           Sua trilha financeira começa com uma conversa.
         </h2>

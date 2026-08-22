@@ -24,13 +24,21 @@ const APPROACH = [
 export function ApproachSection() {
   return (
     <section className="mx-auto w-full max-w-[1280px] px-6 py-20 sm:px-8 lg:px-10">
-      <div className="mx-auto max-w-2xl text-center">
-        <p className="text-sm font-medium uppercase tracking-[0.35em] text-brand-gold">
-          Como atuamos
-        </p>
-        <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-          Duas frentes, uma trilha só.
-        </h2>
+      <div className="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
+        <div>
+          <p className="text-sm font-medium uppercase tracking-[0.35em] text-brand-gold">
+            Como atuamos
+          </p>
+          <h2 className="mt-4 max-w-md text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Duas frentes, uma trilha só.
+          </h2>
+        </div>
+        <a
+          href="#servicos"
+          className="inline-flex h-12 shrink-0 items-center justify-center rounded-full border border-white/20 px-6 font-[family-name:var(--font-manrope)] text-sm font-medium text-white transition hover:border-white/40"
+        >
+          Ver serviços
+        </a>
       </div>
 
       <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">

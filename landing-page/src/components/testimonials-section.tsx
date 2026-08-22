@@ -46,7 +46,12 @@ export function TestimonialsSection() {
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
             </div>
-            <p className="mt-6 text-sm font-medium text-white/70">{testimonial.role}</p>
+            <div className="mt-6 flex items-center gap-3">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-xs font-semibold text-white/50">
+                ?
+              </span>
+              <p className="text-sm font-medium text-white/70">{testimonial.role}</p>
+            </div>
           </div>
         ))}
       </div>
