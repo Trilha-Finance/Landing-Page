@@ -10,7 +10,7 @@ export function ContactSection() {
       <div className="relative mx-auto w-full max-w-[1280px] px-6 py-20 sm:px-8 lg:px-10 lg:py-24">
         <div className="mx-auto max-w-3xl text-center">
           <SectionLabel index="08" label="Contato" className="text-center" />
-          <h1 className="mt-4 font-[family-name:var(--font-display)] text-4xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-5xl lg:text-[3.5rem]">
+          <h1 className="mt-4 font-[family-name:var(--font-display)] font-bold text-4xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-5xl lg:text-[3.5rem]">
             Entre em Contato
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-text-secondary sm:text-[1.05rem]">
@@ -110,7 +110,7 @@ export function ContactSection() {
           <div className="flex justify-center pt-2 lg:col-span-12">
             <button
               type="submit"
-              className="inline-flex h-14 w-full items-center justify-center border border-neon bg-neon px-7 font-[family-name:var(--font-display)] text-sm uppercase tracking-wide text-black transition-colors duration-[200ms] ease-in-out hover:bg-black hover:text-neon sm:w-[224px]"
+              className="inline-flex h-14 w-full items-center justify-center border border-neon bg-neon px-7 font-[family-name:var(--font-display)] font-bold text-sm uppercase tracking-wide text-black transition-colors duration-[200ms] ease-in-out hover:bg-black hover:text-neon sm:w-[224px]"
             >
               Enviar Mensagem
             </button>

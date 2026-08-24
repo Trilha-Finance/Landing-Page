@@ -22,7 +22,7 @@ export function SupportSection() {
 
         <div>
           <SectionLabel index="05" label="Suporte" />
-          <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-4xl">
+          <h2 className="mt-4 font-[family-name:var(--font-display)] font-bold text-3xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-4xl">
             Acompanhamento que acompanha, não só responde.
           </h2>
           <p className="mt-5 max-w-md text-base leading-7 text-text-secondary">

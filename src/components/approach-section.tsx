@@ -28,7 +28,7 @@ export function ApproachSection() {
       <div className="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
         <div>
           <SectionLabel index="02" label="Como atuamos" />
-          <h2 className="mt-4 max-w-md font-[family-name:var(--font-display)] text-3xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-4xl">
+          <h2 className="mt-4 max-w-md font-[family-name:var(--font-display)] font-bold text-3xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-4xl">
             Duas frentes, uma trilha só.
           </h2>
         </div>
@@ -41,7 +41,7 @@ export function ApproachSection() {
             <span className="flex h-11 w-11 items-center justify-center border border-border-line text-neon">
               <column.icon className="h-5 w-5" />
             </span>
-            <h3 className="mt-5 font-[family-name:var(--font-display)] text-xl uppercase text-text-primary">
+            <h3 className="mt-5 font-[family-name:var(--font-display)] font-medium text-xl uppercase text-text-primary">
               {column.title}
             </h3>
             <ul className="mt-5 space-y-3">

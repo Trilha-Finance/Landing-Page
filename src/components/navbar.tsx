@@ -38,7 +38,7 @@ export function Navbar() {
 
         <a
           href="#contato"
-          className="group inline-flex h-11 shrink-0 items-center gap-3 border border-neon bg-neon pl-5 pr-1.5 font-[family-name:var(--font-display)] text-xs uppercase tracking-wide text-black transition-colors duration-[200ms] ease-in-out hover:bg-black hover:text-neon"
+          className="group inline-flex h-11 shrink-0 items-center gap-3 border border-neon bg-neon pl-5 pr-1.5 font-[family-name:var(--font-display)] font-bold text-xs uppercase tracking-wide text-black transition-colors duration-[200ms] ease-in-out hover:bg-black hover:text-neon"
         >
           Contato
           <span className="flex h-8 w-8 shrink-0 items-center justify-center bg-black text-neon transition-transform duration-[200ms] ease-in-out group-hover:translate-x-0.5 group-hover:bg-neon group-hover:text-black">

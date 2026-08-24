@@ -76,7 +76,7 @@ export function PrimaryButton({
   return (
     <a
       href={href}
-      className="group inline-flex h-14 items-center justify-center gap-3 border border-neon bg-neon px-8 font-[family-name:var(--font-display)] text-sm uppercase tracking-wide text-black transition-colors duration-[200ms] ease-in-out hover:bg-black hover:text-neon"
+      className="group inline-flex h-14 items-center justify-center gap-3 border border-neon bg-neon px-8 font-[family-name:var(--font-display)] font-bold text-sm uppercase tracking-wide text-black transition-colors duration-[200ms] ease-in-out hover:bg-black hover:text-neon"
     >
       {children}
       <span aria-hidden className="text-base transition-transform duration-[200ms] ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5">

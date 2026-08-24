@@ -10,7 +10,7 @@ export function HeroSection() {
           <p className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.3em] text-neon">
             TRILHA_FINANCE<BlinkingCursor />
           </p>
-          <h1 className="mt-5 font-[family-name:var(--font-display)] text-4xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-5xl lg:text-[3.25rem]">
+          <h1 className="mt-5 font-[family-name:var(--font-display)] font-bold text-4xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-5xl lg:text-[3.25rem]">
             Finanças de verdade encontram tecnologia de verdade.
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-text-secondary sm:text-lg lg:mx-0">

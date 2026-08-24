@@ -35,7 +35,7 @@ export function FaqSection() {
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
         <div className="text-center lg:sticky lg:top-24 lg:self-start lg:text-left">
           <SectionLabel index="06" label="FAQ" className="text-center lg:text-left" />
-          <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-4xl">
+          <h2 className="mt-4 font-[family-name:var(--font-display)] font-bold text-3xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-4xl">
             Tem dúvidas? Relaxa, a gente responde.
           </h2>
           <p className="mx-auto mt-4 max-w-sm text-sm leading-6 text-text-secondary lg:mx-0">

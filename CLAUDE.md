@@ -13,8 +13,10 @@ com conteúdo e identidade 100% Trilha Finance.
 
 - Next.js 16 (App Router) + React 19 + TypeScript.
 - Tailwind CSS v4 (classes utilitárias inline, sem CSS Modules).
-- Fontes via `next/font/google`: Inter (`--font-inter`, corpo), Archivo Black
-  (`--font-display`, títulos/CTAs), JetBrains Mono (`--font-mono`, labels de
+- Fontes via `next/font/google`: Inter (`--font-inter`, corpo), Chakra Petch
+  (`--font-display`, títulos/CTAs — subsets `latin` + `latin-ext` pra cobrir
+  acentuação em português; peso 700/`font-bold` em títulos e CTAs, peso
+  500/`font-medium` em subtítulos de card), JetBrains Mono (`--font-mono`, labels de
   sistema/dados).
 - ESLint (`eslint-config-next`).
 - Deploy: Vercel, via skill `deploy-to-vercel` (ver `.claude/skills/deploy-to-vercel/` no

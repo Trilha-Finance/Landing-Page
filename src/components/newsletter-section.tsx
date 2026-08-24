@@ -8,7 +8,7 @@ export function NewsletterSection() {
 
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-16">
           <div className="space-y-4">
-            <h2 className="max-w-xl font-[family-name:var(--font-display)] text-4xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-5xl lg:text-6xl">
+            <h2 className="max-w-xl font-[family-name:var(--font-display)] font-bold text-4xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-5xl lg:text-6xl">
               Junte-se à nossa newsletter
             </h2>
 
@@ -32,7 +32,7 @@ export function NewsletterSection() {
 
             <button
               type="submit"
-              className="inline-flex h-[58px] items-center justify-center whitespace-nowrap border border-neon bg-neon px-7 font-[family-name:var(--font-display)] text-sm uppercase tracking-wide text-black transition-colors hover:bg-black hover:text-neon sm:border-l-0"
+              className="inline-flex h-[58px] items-center justify-center whitespace-nowrap border border-neon bg-neon px-7 font-[family-name:var(--font-display)] font-bold text-sm uppercase tracking-wide text-black transition-colors hover:bg-black hover:text-neon sm:border-l-0"
             >
               Inscreva-se
             </button>

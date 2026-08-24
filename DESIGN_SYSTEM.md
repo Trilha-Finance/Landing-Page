@@ -137,8 +137,12 @@ utilitários Tailwind:
 | `--border-line` | `--border-line` | `border-border-line` |
 
 Fontes (`next/font/google`, `src/app/layout.tsx`):
-- Display → `Archivo_Black` (`--font-display`) — usar via
-  `font-[family-name:var(--font-display)]`.
+- Display → `Chakra_Petch` (`--font-display`), subsets `latin` + `latin-ext` (cobre
+  acentuação em português). Pesos carregados: 700 e 500.
+  - Títulos (h1/h2 e o statement de destaque) e CTAs → peso 700 —
+    `font-[family-name:var(--font-display)] font-bold`.
+  - Subtítulos (h3 de card: pilares, abordagem, serviços) → peso 500, mais leve —
+    `font-[family-name:var(--font-display)] font-medium`.
 - Mono → `JetBrains_Mono` (`--font-mono`) — usar via
   `font-[family-name:var(--font-mono)]`.
 - Corpo → `Inter` (`--font-inter`, mapeada em `--font-sans`) — padrão do `body`,

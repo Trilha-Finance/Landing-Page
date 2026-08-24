@@ -33,7 +33,7 @@ export function ServicesSection() {
       <div className="mx-auto w-full max-w-[1280px] px-6 py-20 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-2xl text-center">
           <SectionLabel index="03" label="Serviços" className="text-center" />
-          <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-4xl">
+          <h2 className="mt-4 font-[family-name:var(--font-display)] font-bold text-3xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-4xl">
             Uma suíte de soluções pro seu negócio.
           </h2>
         </div>
@@ -47,7 +47,7 @@ export function ServicesSection() {
               <span className="flex h-14 w-14 items-center justify-center border border-border-line text-neon">
                 <service.icon className="h-6 w-6" />
               </span>
-              <h3 className="mt-5 font-[family-name:var(--font-display)] text-base uppercase leading-tight text-text-primary">
+              <h3 className="mt-5 font-[family-name:var(--font-display)] font-medium text-base uppercase leading-tight text-text-primary">
                 {service.title}
               </h3>
               <p className="mt-3 text-sm leading-6 text-text-secondary">{service.description}</p>

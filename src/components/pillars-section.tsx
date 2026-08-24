@@ -33,7 +33,7 @@ export function PillarsSection() {
             <span className="flex h-11 w-11 items-center justify-center border border-border-line text-neon">
               <pillar.icon className="h-5 w-5" />
             </span>
-            <h3 className="font-[family-name:var(--font-display)] text-base uppercase leading-tight text-text-primary">
+            <h3 className="font-[family-name:var(--font-display)] font-medium text-base uppercase leading-tight text-text-primary">
               {pillar.title}
             </h3>
             <p className="text-sm leading-6 text-text-secondary">{pillar.description}</p>

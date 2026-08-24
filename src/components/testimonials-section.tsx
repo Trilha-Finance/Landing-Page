@@ -23,7 +23,7 @@ export function TestimonialsSection() {
     <section className="mx-auto w-full max-w-[1280px] px-6 py-20 sm:px-8 lg:px-10">
       <div className="mx-auto max-w-2xl text-center">
         <SectionLabel index="04" label="Depoimentos" className="text-center" />
-        <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-4xl">
+        <h2 className="mt-4 font-[family-name:var(--font-display)] font-bold text-3xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-4xl">
           Histórias reais, em breve.
         </h2>
         <p className="mt-4 text-sm text-text-secondary">
