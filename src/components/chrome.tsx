@@ -18,30 +18,30 @@ export function SectionLabel({
   );
 }
 
-export function CornerMarks() {
+export function CornerMarks({ className = "text-border-line" }: { className?: string }) {
   return (
     <>
       <span
         aria-hidden
-        className="pointer-events-none absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2 select-none font-[family-name:var(--font-mono)] text-xs text-border-line"
+        className={`pointer-events-none absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2 select-none font-[family-name:var(--font-mono)] text-xs ${className}`}
       >
         +
       </span>
       <span
         aria-hidden
-        className="pointer-events-none absolute right-0 top-0 translate-x-1/2 -translate-y-1/2 select-none font-[family-name:var(--font-mono)] text-xs text-border-line"
+        className={`pointer-events-none absolute right-0 top-0 translate-x-1/2 -translate-y-1/2 select-none font-[family-name:var(--font-mono)] text-xs ${className}`}
       >
         +
       </span>
       <span
         aria-hidden
-        className="pointer-events-none absolute bottom-0 left-0 -translate-x-1/2 translate-y-1/2 select-none font-[family-name:var(--font-mono)] text-xs text-border-line"
+        className={`pointer-events-none absolute bottom-0 left-0 -translate-x-1/2 translate-y-1/2 select-none font-[family-name:var(--font-mono)] text-xs ${className}`}
       >
         +
       </span>
       <span
         aria-hidden
-        className="pointer-events-none absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 select-none font-[family-name:var(--font-mono)] text-xs text-border-line"
+        className={`pointer-events-none absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 select-none font-[family-name:var(--font-mono)] text-xs ${className}`}
       >
         +
       </span>
@@ -76,7 +76,7 @@ export function PrimaryButton({
   return (
     <a
       href={href}
-      className="group inline-flex h-14 items-center justify-center gap-3 border border-neon bg-neon px-8 font-[family-name:var(--font-display)] font-bold text-sm uppercase tracking-wide text-black transition-colors duration-[200ms] ease-in-out hover:bg-black hover:text-neon"
+      className="group inline-flex h-14 items-center justify-center gap-3 border border-neon bg-neon px-8 font-[family-name:var(--font-display)] font-bold text-sm uppercase tracking-wide text-white transition-colors duration-[200ms] ease-in-out hover:bg-black hover:text-neon"
     >
       {children}
       <span aria-hidden className="text-base transition-transform duration-[200ms] ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5">

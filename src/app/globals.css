@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --bg-base: #080808;
-  --bg-pure: #000000;
-  --accent-neon: #d4ff33;
-  --text-primary: #f0f0f0;
-  --text-secondary: #8a8a8a;
-  --border-line: #2a2a2a;
+  --bg-base: #f4f4f2;
+  --bg-pure: #ffffff;
+  --accent-neon: #3157ff;
+  --text-primary: #16171b;
+  --text-secondary: #65656b;
+  --border-line: #e1e1e4;
 
   --background: var(--bg-base);
   --foreground: var(--text-primary);
@@ -59,4 +59,25 @@ body {
 
 .animate-cybr-cursor {
   animation: cybr-cursor 1s step-end infinite;
+}
+
+@keyframes cybr-scan {
+  0% {
+    top: -10%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 110%;
+    opacity: 0;
+  }
+}
+
+.animate-cybr-scan {
+  animation: cybr-scan 4s linear infinite;
 }

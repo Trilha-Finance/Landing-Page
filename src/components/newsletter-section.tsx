@@ -2,7 +2,7 @@ import { SectionLabel } from "./chrome";
 
 export function NewsletterSection() {
   return (
-    <section className="w-full border-y border-border-line bg-bg-pure">
+    <section id="newsletter" className="w-full border-y border-border-line bg-bg-pure">
       <div className="mx-auto w-full max-w-[1280px] px-6 py-16 sm:px-8 lg:px-10">
         <SectionLabel index="07" label="Newsletter" className="mb-8 text-center" />
 
@@ -27,12 +27,12 @@ export function NewsletterSection() {
               id="newsletter-email"
               type="email"
               placeholder="Digite o seu email"
-              className="h-[58px] w-full border border-border-line bg-black px-5 text-[1rem] text-text-primary outline-none placeholder:text-text-secondary focus:border-neon sm:max-w-[380px]"
+              className="h-[58px] w-full border border-border-line bg-black px-5 text-[1rem] text-white outline-none placeholder:text-white/40 focus:border-neon sm:max-w-[380px]"
             />
 
             <button
               type="submit"
-              className="inline-flex h-[58px] items-center justify-center whitespace-nowrap border border-neon bg-neon px-7 font-[family-name:var(--font-display)] font-bold text-sm uppercase tracking-wide text-black transition-colors hover:bg-black hover:text-neon sm:border-l-0"
+              className="inline-flex h-[58px] items-center justify-center whitespace-nowrap border border-neon bg-neon px-7 font-[family-name:var(--font-display)] font-bold text-sm uppercase tracking-wide text-white transition-colors hover:bg-black hover:text-neon sm:border-l-0"
             >
               Inscreva-se
             </button>

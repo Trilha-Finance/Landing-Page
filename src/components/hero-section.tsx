@@ -1,12 +1,12 @@
-import { HeroGraphic } from "./graphics";
+import { HeroPortrait } from "./graphics";
 import { PrimaryButton, SecondaryButton, BlinkingCursor } from "./chrome";
 
 export function HeroSection() {
   return (
     <section id="top" className="relative overflow-hidden border-b border-border-line">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,255,51,0.06),transparent_60%)]" />
-      <div className="relative mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-12 px-6 py-24 sm:px-8 lg:grid-cols-2 lg:gap-10 lg:px-10 lg:py-32">
-        <div className="text-center lg:text-left">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(49,87,255,0.08),transparent_60%)]" />
+      <div className="relative mx-auto grid w-full max-w-[1280px] grid-cols-1 divide-y divide-border-line lg:grid-cols-2 lg:divide-x lg:divide-y-0">
+        <div className="flex flex-col justify-center px-6 py-24 text-center sm:px-8 lg:px-10 lg:py-32 lg:text-left">
           <p className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.3em] text-neon">
             TRILHA_FINANCE<BlinkingCursor />
           </p>
@@ -24,7 +24,9 @@ export function HeroSection() {
           </div>
         </div>
 
-        <HeroGraphic />
+        <div className="flex items-center justify-center p-6 sm:p-8 lg:p-10">
+          <HeroPortrait />
+        </div>
       </div>
     </section>
   );

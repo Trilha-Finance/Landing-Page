@@ -1,5 +1,4 @@
 import Image from "next/image";
-import logoFull from "../assets/logos/Logo-trilha.png";
 import { StatusDot } from "./chrome";
 
 const NODES = [
@@ -16,14 +15,7 @@ export function FooterSection() {
         <section className="grid gap-14 border-b border-border-line pb-16 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:gap-x-20">
           <div className="space-y-6 lg:pr-16">
             <a href="#top" className="inline-flex items-center border border-border-line bg-white px-3 py-1.5">
-              <Image
-                src={logoFull}
-                alt="Trilha Finance"
-                width={168}
-                height={56}
-                priority
-                className="h-auto w-[180px]"
-              />
+              
             </a>
 
             <div className="relative h-24 w-full max-w-[280px] border border-border-line">

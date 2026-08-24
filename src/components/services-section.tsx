@@ -1,29 +1,42 @@
-import { BriefcaseIcon, BuildingIcon, CapIcon, CodeIcon, ArrowIcon } from "./icons";
+import Image from "next/image";
+import { ArrowIcon } from "./icons";
 import { SectionLabel } from "./chrome";
+import desenvolvimentoSoftware from "../assets/services/desenvolvimento-software.png";
+import automacao from "../assets/services/automacao.png";
+import inteligenciaArtificial from "../assets/services/inteligencia-artificial.png";
+import integracoes from "../assets/services/integracoes.jpg";
+import tecnologia from "../assets/services/tecnologia.jpg";
 
 const SERVICES = [
   {
-    icon: BriefcaseIcon,
-    title: "Consultoria Financeira",
-    description:
-      "Planejamento financeiro e patrimonial sob medida, pra pessoas físicas e empresas.",
-  },
-  {
-    icon: CodeIcon,
+    image: desenvolvimentoSoftware,
     title: "Desenvolvimento de Software",
     description:
-      "Produtos digitais construídos do zero, do primeiro protótipo à operação em produção.",
+      "Produtos digitais sob medida pro seu negócio, do primeiro protótipo à operação estável em produção.",
   },
   {
-    icon: CapIcon,
-    title: "Treinamentos",
+    image: automacao,
+    title: "Automação",
     description:
-      "Educação financeira e tecnológica com linguagem acessível, pra equipes e pro público em geral.",
+      "Tarefas repetitivas viram fluxos automáticos — menos retrabalho, menos erro manual, mais tempo livre.",
   },
   {
-    icon: BuildingIcon,
-    title: "Abertura de Empresas",
-    description: "Estruturação e abertura de empresas com orientação de ponta a ponta.",
+    image: inteligenciaArtificial,
+    title: "Inteligência Artificial",
+    description:
+      "IA aplicada de verdade: lê dados, acelera decisões e abre caminho pra soluções que antes eram inviáveis.",
+  },
+  {
+    image: integracoes,
+    title: "Integrações",
+    description:
+      "Sistemas, APIs e ferramentas conectados entre si — chega de planilha solta e retrabalho manual.",
+  },
+  {
+    image: tecnologia,
+    title: "Tecnologia",
+    description:
+      "Consultoria técnica de ponta a ponta pra escolher, construir e manter a stack certa pro seu momento.",
   },
 ];
 
@@ -38,19 +51,28 @@ export function ServicesSection() {
           </h2>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-px bg-border-line sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-1 gap-px bg-border-line sm:grid-cols-2 lg:grid-cols-5">
           {SERVICES.map((service) => (
-            <div key={service.title} className="group relative bg-bg-pure p-7">
-              <span className="absolute right-6 top-6 text-text-secondary transition-colors group-hover:text-neon">
+            <div key={service.title} className="group relative flex flex-col items-center bg-bg-pure p-7 text-center">
+              <span className="absolute right-6 top-6 z-10 text-text-secondary transition-colors group-hover:text-neon">
                 <ArrowIcon className="h-4 w-4" />
               </span>
-              <span className="flex h-14 w-14 items-center justify-center border border-border-line text-neon">
-                <service.icon className="h-6 w-6" />
-              </span>
-              <h3 className="mt-5 font-[family-name:var(--font-display)] font-medium text-base uppercase leading-tight text-text-primary">
+              <div className="relative mx-auto h-60 w-60 overflow-hidden">
+                <Image
+                  src={service.image}
+                  alt={`Ilustração wireframe — ${service.title}`}
+                  fill
+                  className="object-cover"
+                />
+                <span aria-hidden className="pointer-events-none absolute left-0 top-0 h-3 w-3 border-l-2 border-t-2 border-neon" />
+                <span aria-hidden className="pointer-events-none absolute right-0 top-0 h-3 w-3 border-r-2 border-t-2 border-neon" />
+                <span aria-hidden className="pointer-events-none absolute bottom-0 left-0 h-3 w-3 border-b-2 border-l-2 border-neon" />
+                <span aria-hidden className="pointer-events-none absolute bottom-0 right-0 h-3 w-3 border-b-2 border-r-2 border-neon" />
+              </div>
+              <h3 className="mt-5 text-center font-[family-name:var(--font-display)] font-medium text-base uppercase leading-tight text-text-primary">
                 {service.title}
               </h3>
-              <p className="mt-3 text-sm leading-6 text-text-secondary">{service.description}</p>
+              <p className="mt-3 text-center text-sm leading-6 text-text-secondary">{service.description}</p>
             </div>
           ))}
         </div>

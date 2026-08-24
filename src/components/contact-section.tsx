@@ -1,12 +1,12 @@
 import { SectionLabel } from "./chrome";
 
 const FIELD_CLASS =
-  "h-12 w-full border border-border-line bg-black px-5 text-base text-text-primary outline-none placeholder:text-text-secondary transition-colors duration-[200ms] ease-in-out hover:border-neon/40 focus:border-neon";
+  "h-12 w-full border border-border-line bg-black px-5 text-base text-white outline-none placeholder:text-white/40 transition-colors duration-[200ms] ease-in-out hover:border-neon/40 focus:border-neon";
 
 export function ContactSection() {
   return (
     <section id="contato" className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,255,51,0.05),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(49,87,255,0.06),transparent_60%)]" />
       <div className="relative mx-auto w-full max-w-[1280px] px-6 py-20 sm:px-8 lg:px-10 lg:py-24">
         <div className="mx-auto max-w-3xl text-center">
           <SectionLabel index="08" label="Contato" className="text-center" />
@@ -110,7 +110,7 @@ export function ContactSection() {
           <div className="flex justify-center pt-2 lg:col-span-12">
             <button
               type="submit"
-              className="inline-flex h-14 w-full items-center justify-center border border-neon bg-neon px-7 font-[family-name:var(--font-display)] font-bold text-sm uppercase tracking-wide text-black transition-colors duration-[200ms] ease-in-out hover:bg-black hover:text-neon sm:w-[224px]"
+              className="inline-flex h-14 w-full items-center justify-center border border-neon bg-neon px-7 font-[family-name:var(--font-display)] font-bold text-sm uppercase tracking-wide text-white transition-colors duration-[200ms] ease-in-out hover:bg-black hover:text-neon sm:w-[224px]"
             >
               Enviar Mensagem
             </button>

@@ -10,22 +10,45 @@
 > redesign aplicado em 2026-08-24 (substitui a identidade anterior verde/dourado). A
 > seção "Mapeamento para este repo", no final, documenta como cada token foi
 > implementado em código.
+>
+> **Atualização de paleta (2026-08-24, mesmo dia):** o brutalismo permanece — grid
+> wireframe, bordas retas, tipografia display/mono — mas a base de cor inverteu de
+> "quase-preto dominante + lime neon" para "branco/off-white dominante + preto/grafite
+> estrutural + azul primário". Ver seção 1 abaixo (já atualizada) para os valores
+> atuais; a paleta lime antiga só sobrevive como referência histórica.
 
 ## 1. Paleta de cores
 
 | Token | Hex | Uso |
 | --- | --- | --- |
-| `--bg-base` | `#080808` | Fundo principal (quase preto, não é `#000` puro) |
-| `--bg-pure` | `#000000` | Fundo de blocos "mais profundos" (cards de imagem, footer) |
-| `--accent-neon` | `#D0F730` (~`#D4FF33`) | Cor de assinatura da marca — lime/verde-limão neon |
-| `--text-primary` | `#F0F0F0` | Títulos e texto de alto contraste (quase branco, não puro) |
-| `--text-secondary` | `#8A8A8A` aprox. | Parágrafos de apoio, legendas, texto secundário em cinza |
-| `--border-line` | `#2A2A2A` aprox. | Linhas finas de grid, divisórias, bordas de card |
+| `--bg-base` | `#F4F4F2` | Fundo principal (off-white, não é `#FFF` puro) — domina ~85% da superfície |
+| `--bg-pure` | `#FFFFFF` | Fundo de blocos "mais limpos" (seções em faixa: serviços, newsletter, footer, suporte) |
+| `--accent-neon` | `#3157FF` | Cor de assinatura da marca — azul primário (nome do token/utilitário Tailwind `neon` foi mantido por compatibilidade, mas não é mais lime) |
+| `--text-primary` | `#16171B` | Títulos e texto de alto contraste (grafite quase preto, não `#000` puro) |
+| `--text-secondary` | `#65656B` | Parágrafos de apoio, legendas, texto secundário em cinza-ardósia |
+| `--border-line` | `#E1E1E4` | Linhas finas de grid, divisórias, bordas de card (cinza claro sobre fundo claro) |
 | `--overlay-glitch` | `--accent-neon` a 10–20% opacidade | Ruído/scanlines/glitch sobre imagens |
 
-**Regra de uso:** preto domina ~85% da superfície; o neon é usado com extrema
-economia — só em CTAs, labels de sistema (`/01`, `SYS_TIME`), sublinhados de
-destaque e pontos de status. Nunca como cor de fundo grande.
+**Regra de uso:** branco/off-white domina ~85% da superfície; azul primário é usado
+com extrema economia — só em CTAs, labels de sistema (`/01`, `SYS_TIME`),
+sublinhados de destaque e pontos de status. Nunca como cor de fundo grande, exceto
+nos blocos de CTA que são o card sólido de destaque (ex.: `ClosingCtaSection`).
+
+**Preto/grafite como cor secundária estrutural:** alguns blocos de "chrome" ficam
+propositalmente sólidos em preto (`bg-black` literal, não o token `--bg-base`) para
+criar contraste com o fundo claro — navbar, o card retrô do hero (`HeroPortrait`),
+inputs de formulário, o botão dentro do card de CTA final, e a faixa
+"ACCESS GRANTED_" do footer. **Dentro desses blocos pretos, não usar os tokens
+`text-text-primary` / `text-text-secondary` / `text-border-line`** — eles agora
+apontam para tons escuros pensados pro fundo claro e ficam ilegíveis sobre preto. Use
+utilitários literais claros (`text-white`, `text-white/60`, `placeholder:text-white/40`
+etc.) nesses casos — ver `HeroPortrait` em `graphics.tsx` e os `FIELD_CLASS` de
+`contact-section.tsx` / `newsletter-section.tsx` como referência.
+
+**Texto sobre fundo azul sólido (`bg-neon`):** sempre `text-white`, nunca
+`text-black` — preto sobre `#3157FF` fica abaixo do contraste ideal para texto
+normal. Azul como cor de *texto* (`text-neon`) continua funcionando bem tanto sobre
+branco/off-white quanto sobre preto.
 
 ## 2. Tipografia
 

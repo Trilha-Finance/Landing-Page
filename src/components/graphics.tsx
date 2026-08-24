@@ -1,49 +1,94 @@
-import { ChainIcon, WealthIcon } from "./icons";
-import { BlinkingCursor, StatusDot } from "./chrome";
+import Image from "next/image";
+import { CornerMarks } from "./chrome";
+import heroTerminal from "../assets/hero/wireframe-terminal.png";
 
-export function HeroGraphic() {
+const BARCODE_HEIGHTS = [14, 22, 10, 26, 16, 12, 24, 18, 10, 20];
+
+function CrosshairMark() {
   return (
-    <div className="relative mx-auto flex h-[360px] w-full max-w-sm items-center justify-center border border-border-line sm:h-[420px]">
+    <svg viewBox="0 0 24 24" className="h-4 w-4 text-text-secondary" fill="none" stroke="currentColor" strokeWidth="1" aria-hidden>
+      <path d="M12 2v5M12 17v5M2 12h5M17 12h5" />
+      <rect x="7" y="7" width="10" height="10" />
+    </svg>
+  );
+}
+
+function GlobeMark({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={`h-6 w-6 text-text-secondary ${className}`}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1"
+      aria-hidden
+    >
+      <circle cx="12" cy="12" r="9" />
+      <ellipse cx="12" cy="12" rx="4" ry="9" />
+      <path d="M3 12h18M4.5 7h15M4.5 17h15" />
+    </svg>
+  );
+}
+
+function Barcode() {
+  return (
+    <div className="flex items-end gap-[2px]" aria-hidden>
+      {BARCODE_HEIGHTS.map((h, i) => (
+        <span key={i} className="w-[2px] bg-text-secondary" style={{ height: `${h}px` }} />
+      ))}
+    </div>
+  );
+}
+
+export function HeroPortrait() {
+  return (
+    <div className="relative aspect-square w-full overflow-hidden border border-border-line bg-bg-pure">
+      <Image
+        src={heroTerminal}
+        alt="Ilustração wireframe de um terminal de computador retrô"
+        fill
+        className="object-cover"
+        priority
+      />
+
       <div
         aria-hidden
-        className="absolute inset-0 opacity-[0.15]"
-        style={{
-          backgroundImage:
-            "linear-gradient(var(--border-line) 1px, transparent 1px), linear-gradient(90deg, var(--border-line) 1px, transparent 1px)",
-          backgroundSize: "24px 24px",
-        }}
+        className="animate-cybr-scan absolute inset-x-0 h-16 bg-gradient-to-b from-transparent via-neon/15 to-transparent"
       />
-      <div className="absolute h-64 w-64 rounded-full bg-neon/10 blur-3xl" />
-      <div className="absolute h-72 w-72 rotate-45 border border-border-line" />
-      <div className="absolute h-56 w-56 rotate-12 border border-neon/20" />
 
-      <div className="absolute left-2 top-6 flex items-center gap-3 border border-border-line bg-black px-4 py-3 sm:left-0">
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center border border-neon/40 text-neon">
-          <WealthIcon className="h-4 w-4" />
-        </span>
-        <span className="font-[family-name:var(--font-mono)] text-[11px] uppercase tracking-wide text-text-primary">
-          Planejamento Financeiro
-        </span>
+      <div className="absolute left-4 top-4 flex flex-col gap-2">
+        <CrosshairMark />
+        <p className="font-[family-name:var(--font-mono)] text-[10px] uppercase leading-tight text-text-secondary">
+          &gt;RENDERING...
+          <br />
+          <span className="text-neon">87%</span>
+        </p>
       </div>
 
-      <div className="absolute bottom-8 right-2 flex items-center gap-3 border border-border-line bg-black px-4 py-3 sm:right-0">
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center border border-border-line text-text-secondary">
-          <ChainIcon className="h-4 w-4" />
+      <GlobeMark className="absolute right-4 top-4" />
+
+      <div className="absolute left-4 top-1/2 flex -translate-y-1/2 flex-col items-start gap-2">
+        <span className="font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-wide text-neon">
+          /01
         </span>
-        <span className="font-[family-name:var(--font-mono)] text-[11px] uppercase tracking-wide text-text-primary">
-          Blockchain &amp; Web3
-        </span>
+        <Barcode />
       </div>
 
-      <span className="relative flex h-24 w-24 items-center justify-center border border-neon bg-black text-neon">
-        <TrailIcon className="h-11 w-11" />
+      <div className="absolute bottom-16 right-4 border border-neon/40 bg-bg-pure/80 px-3 py-2">
+        <p className="font-[family-name:var(--font-mono)] text-[9px] uppercase leading-relaxed text-neon">
+          X_36.1749
+          <br />
+          Y_-86.7676
+          <br />
+          Z_46.6827
+        </p>
+      </div>
+
+      <span className="absolute bottom-3 right-4 font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-wide text-text-secondary">
+        {"//SCN_01"}
       </span>
 
-      <span className="absolute bottom-2 left-2 font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-wide text-text-secondary">
-        <StatusDot className="mr-1.5 align-middle" />
-        SYS_TRILHA
-        <BlinkingCursor className="ml-0.5" />
-      </span>
+      <CornerMarks />
     </div>
   );
 }
