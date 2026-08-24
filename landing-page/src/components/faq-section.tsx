@@ -1,4 +1,5 @@
 import { ChevronIcon } from "./icons";
+import { SectionLabel } from "./chrome";
 
 const FAQS = [
   {
@@ -33,29 +34,24 @@ export function FaqSection() {
     <section className="mx-auto w-full max-w-[1280px] px-6 py-20 sm:px-8 lg:px-10">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
         <div className="text-center lg:sticky lg:top-24 lg:self-start lg:text-left">
-          <p className="text-sm font-medium uppercase tracking-[0.35em] text-brand-gold">
-            FAQ
-          </p>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <SectionLabel index="06" label="FAQ" className="text-center lg:text-left" />
+          <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-4xl">
             Tem dúvidas? Relaxa, a gente responde.
           </h2>
-          <p className="mx-auto mt-4 max-w-sm text-sm leading-6 text-white/55 lg:mx-0">
+          <p className="mx-auto mt-4 max-w-sm text-sm leading-6 text-text-secondary lg:mx-0">
             Selecionamos algumas dúvidas frequentes pra você entender rapidinho como a
             Trilha pode ajudar.
           </p>
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-px bg-border-line">
           {FAQS.map((faq) => (
-            <details
-              key={faq.question}
-              className="group rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-5 open:bg-white/[0.05]"
-            >
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-medium text-white marker:content-none">
+            <details key={faq.question} className="group bg-bg-base px-6 py-5 open:bg-bg-pure">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-medium text-text-primary marker:content-none">
                 {faq.question}
-                <ChevronIcon className="h-5 w-5 shrink-0 text-white/50 transition-transform duration-200 group-open:rotate-180" />
+                <ChevronIcon className="h-5 w-5 shrink-0 text-text-secondary transition-transform duration-200 group-open:rotate-180 group-open:text-neon" />
               </summary>
-              <p className="mt-4 text-sm leading-6 text-white/60">{faq.answer}</p>
+              <p className="mt-4 text-sm leading-6 text-text-secondary">{faq.answer}</p>
             </details>
           ))}
         </div>

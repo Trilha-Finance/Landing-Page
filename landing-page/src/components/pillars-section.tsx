@@ -23,15 +23,20 @@ const PILLARS = [
 
 export function PillarsSection() {
   return (
-    <section className="border-y border-white/10">
+    <section className="border-b border-border-line">
       <div className="mx-auto grid w-full max-w-[1280px] grid-cols-1 gap-10 px-6 py-16 sm:px-8 md:grid-cols-3 lg:px-10">
-        {PILLARS.map((pillar) => (
-          <div key={pillar.title} className="flex flex-col items-start gap-4">
-            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/[0.06] text-brand-gold">
+        {PILLARS.map((pillar, i) => (
+          <div key={pillar.title} className="flex flex-col items-start gap-4 border-l border-border-line pl-6">
+            <span className="font-[family-name:var(--font-mono)] text-[11px] uppercase tracking-wide text-neon">
+              /{String(i + 1).padStart(2, "0")}
+            </span>
+            <span className="flex h-11 w-11 items-center justify-center border border-border-line text-neon">
               <pillar.icon className="h-5 w-5" />
             </span>
-            <h3 className="text-lg font-semibold text-white">{pillar.title}</h3>
-            <p className="text-sm leading-6 text-white/60">{pillar.description}</p>
+            <h3 className="font-[family-name:var(--font-display)] text-base uppercase leading-tight text-text-primary">
+              {pillar.title}
+            </h3>
+            <p className="text-sm leading-6 text-text-secondary">{pillar.description}</p>
           </div>
         ))}
       </div>

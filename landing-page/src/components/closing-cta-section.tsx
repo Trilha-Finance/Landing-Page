@@ -3,18 +3,21 @@ import { TrailIcon } from "./graphics";
 export function ClosingCtaSection() {
   return (
     <section className="mx-auto w-full max-w-[1280px] px-6 pb-20 sm:px-8 lg:px-10">
-      <div className="flex flex-col items-center gap-6 rounded-[2.5rem] bg-brand-gold px-8 py-16 text-center sm:px-16">
-        <span className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-deep/10 text-brand-deep">
+      <div className="relative flex flex-col items-center gap-6 border border-neon bg-neon px-8 py-16 text-center sm:px-16">
+        <span className="flex h-16 w-16 items-center justify-center border border-black/20 text-black">
           <TrailIcon className="h-8 w-8" />
         </span>
-        <h2 className="max-w-xl text-3xl font-bold tracking-tight text-brand-deep sm:text-4xl">
+        <h2 className="max-w-xl font-[family-name:var(--font-display)] text-3xl uppercase leading-[0.95] tracking-tight text-black sm:text-4xl">
           Sua trilha financeira começa com uma conversa.
         </h2>
         <a
           href="#contato"
-          className="inline-flex h-14 items-center justify-center rounded-full bg-brand-deep px-8 font-[family-name:var(--font-manrope)] text-base font-medium text-white transition duration-[250ms] ease-in-out hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(8,60,47,0.35)]"
+          className="group inline-flex h-14 items-center justify-center gap-3 border border-black bg-black px-8 font-[family-name:var(--font-display)] text-sm uppercase tracking-wide text-neon transition-colors duration-[200ms] ease-in-out hover:bg-transparent hover:text-black"
         >
           Fale com a gente
+          <span aria-hidden className="transition-transform duration-[200ms] ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+            ↗
+          </span>
         </a>
       </div>
     </section>

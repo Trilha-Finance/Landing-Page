@@ -1,3 +1,5 @@
+import { SectionLabel } from "./chrome";
+
 const PLACEHOLDER_TESTIMONIALS = [
   {
     quote:
@@ -20,13 +22,11 @@ export function TestimonialsSection() {
   return (
     <section className="mx-auto w-full max-w-[1280px] px-6 py-20 sm:px-8 lg:px-10">
       <div className="mx-auto max-w-2xl text-center">
-        <p className="text-sm font-medium uppercase tracking-[0.35em] text-brand-gold">
-          Depoimentos
-        </p>
-        <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        <SectionLabel index="04" label="Depoimentos" className="text-center" />
+        <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-4xl">
           Histórias reais, em breve.
         </h2>
-        <p className="mt-4 text-sm text-white/50">
+        <p className="mt-4 text-sm text-text-secondary">
           Os cards abaixo são ilustrativos — vão dar lugar a depoimentos reais assim que
           os primeiros cases forem publicados.
         </p>
@@ -36,21 +36,23 @@ export function TestimonialsSection() {
         {PLACEHOLDER_TESTIMONIALS.map((testimonial) => (
           <div
             key={testimonial.role}
-            className="flex flex-col justify-between rounded-3xl border border-dashed border-white/15 bg-white/[0.02] p-7"
+            className="flex flex-col justify-between border border-dashed border-border-line p-7"
           >
             <div>
-              <span className="inline-flex rounded-full bg-white/[0.06] px-3 py-1 text-xs font-medium uppercase tracking-wide text-white/50">
+              <span className="inline-flex border border-border-line px-3 py-1 font-[family-name:var(--font-mono)] text-[10px] uppercase tracking-wide text-text-secondary">
                 Depoimento ilustrativo
               </span>
-              <p className="mt-4 text-sm leading-6 text-white/60 italic">
+              <p className="mt-4 text-sm leading-6 italic text-text-secondary">
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
             </div>
             <div className="mt-6 flex items-center gap-3">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10 text-xs font-semibold text-white/50">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center border border-border-line font-[family-name:var(--font-mono)] text-xs text-text-secondary">
                 ?
               </span>
-              <p className="text-sm font-medium text-white/70">{testimonial.role}</p>
+              <p className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-wide text-text-secondary">
+                {testimonial.role}
+              </p>
             </div>
           </div>
         ))}

@@ -13,25 +13,37 @@ com conteúdo e identidade 100% Trilha Finance.
 
 - Next.js 16 (App Router) + React 19 + TypeScript.
 - Tailwind CSS v4 (classes utilitárias inline, sem CSS Modules).
-- Fontes via `next/font/google`: Inter (`--font-inter`), Manrope (`--font-manrope`, usada
-  nos textos de destaque/CTA), Geist Mono (`--font-geist-mono`).
+- Fontes via `next/font/google`: Inter (`--font-inter`, corpo), Archivo Black
+  (`--font-display`, títulos/CTAs), JetBrains Mono (`--font-mono`, labels de
+  sistema/dados).
 - ESLint (`eslint-config-next`).
 - Deploy: Vercel, via skill `deploy-to-vercel` (ver `.claude/skills/deploy-to-vercel/` no
   vault TrilhaOS).
 
-## Identidade visual (oficial — ver brief de marca no vault TrilhaOS em
-`3_Recursos/30-39 Redes Sociais/31 Estrategia e Posicionamento/brief-de-marca-e-posicionamento.md`)
+## Identidade visual (oficial — design system "CYBR_", aplicado em 2026-08-24; ver
+`DESIGN_SYSTEM.md` na raiz do repo para a spec completa)
 
-- Verde institucional primário: `#083C33` (utilitário Tailwind `brand`).
-- Verde institucional secundário, usado em CTA/texto sobre branco: `#083C2F`
-  (utilitário `brand-deep`).
-- Dourado de destaque: `#FCB001` (utilitário `brand-gold`).
-- Tokens definidos em `src/app/globals.css` via `@theme inline` — usar sempre
-  `bg-brand`/`text-brand-deep`/`bg-brand-gold` etc. em vez de hex cru, pra não repetir a
-  divergência de cor que existia antes deste redesign.
-- Base branca para cards/navbar sobre o verde.
-- Texto em Manrope `font-light`/`font-medium` nos elementos de navegação e CTA; Inter
-  como corpo padrão.
+Substituiu a identidade anterior (verde institucional `#083C33` + dourado `#FCB001`).
+Estética "cyber brutalism": fundo quase-preto dominante (~85% da superfície), acentos em
+verde-limão neon usados com extrema economia (CTAs, labels de sistema, pontos de
+status), tipografia display bold uppercase + mono técnico para dados/labels, bordas
+retas sem `border-radius`.
+
+- `--bg-base` `#080808` / `--bg-pure` `#000000` — fundos (utilitários `bg-bg-base` /
+  `bg-bg-pure`).
+- `--accent-neon` `#D4FF33` — cor de assinatura, só em CTAs/labels/status
+  (`bg-neon` / `text-neon` / `border-neon`).
+- `--text-primary` `#F0F0F0` (`text-text-primary`, herdado por padrão) e
+  `--text-secondary` `#8A8A8A` (`text-text-secondary`) para corpo/legendas.
+- `--border-line` `#2A2A2A` (`border-border-line`) para divisórias e cards.
+- Tokens definidos em `src/app/globals.css` via `@theme inline` — usar sempre os
+  utilitários acima em vez de hex cru.
+- Componentes de chrome decorativo (label `/0N`, corner marks, status dot, cursor
+  piscante, botões primário/secundário) ficam em `src/components/chrome.tsx` — reusar
+  em vez de recriar o padrão visual em cada seção nova.
+- A logomarca (`Logo-trilha.png`) usa verde escuro sobre fundo transparente e fica
+  ilegível direto no preto — sempre envolver num chip `bg-white border border-border-line`
+  (ver `navbar.tsx` / `footer-section.tsx`) em vez de aplicá-la solta sobre fundo escuro.
 
 ## Como rodar localmente
 
@@ -51,6 +63,10 @@ npm run lint
   chrome fixo).
 - Ícones inline simples ficam em `src/components/icons.tsx`, exportados como
   componentes SVG (`export function XIcon({ className })`) — sem lib de ícones externa.
+- Elementos decorativos recorrentes do design system CYBR_ (label de seção `/0N`,
+  corner marks, status dot, cursor piscante, botões primário/secundário) ficam em
+  `src/components/chrome.tsx`, no mesmo padrão não-`*-section` de `icons.tsx` /
+  `graphics.tsx`.
 - Imagens estáticas (logo) ficam em `src/assets/` e são importadas como módulo
   (`import logo from "../assets/logos/Logo-trilha.png"`) para o Next otimizar via
   `next/image`, não em `public/` a menos que precisem de URL direta.

@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
 :root {
-  --background: #083c33;
-  --foreground: #ffffff;
-  --color-brand: #083c33;
-  --color-brand-deep: #083c2f;
-  --color-brand-gold: #fcb001;
+  --bg-base: #080808;
+  --bg-pure: #000000;
+  --accent-neon: #d4ff33;
+  --text-primary: #f0f0f0;
+  --text-secondary: #8a8a8a;
+  --border-line: #2a2a2a;
+
+  --background: var(--bg-base);
+  --foreground: var(--text-primary);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-brand: var(--color-brand);
-  --color-brand-deep: var(--color-brand-deep);
-  --color-brand-gold: var(--color-brand-gold);
+  --color-bg-base: var(--bg-base);
+  --color-bg-pure: var(--bg-pure);
+  --color-neon: var(--accent-neon);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border-line: var(--border-line);
   --font-sans: var(--font-inter);
-  --font-manrope: var(--font-manrope);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg-base);
+  color: var(--text-primary);
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+@keyframes cybr-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes cybr-cursor {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-cybr-pulse {
+  animation: cybr-pulse 1.8s ease-in-out infinite;
+}
+
+.animate-cybr-cursor {
+  animation: cybr-cursor 1s step-end infinite;
 }

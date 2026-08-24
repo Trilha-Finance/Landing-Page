@@ -15,7 +15,7 @@ import { TestimonialsSection } from "../components/testimonials-section";
 
 export default function Home() {
   return (
-    <main className="w-full bg-brand text-white">
+    <main className="w-full bg-bg-base text-text-primary">
       <Navbar />
       <HeroSection />
       <PillarsSection />
