@@ -19,9 +19,9 @@ export default function Home() {
     <main className="w-full bg-bg-base text-text-primary">
       <Navbar />
       <HeroSection />
+      <StatementSection />
       <TechMarqueeSection />
       <PillarsSection />
-      <StatementSection />
       <ApproachSection />
       <ServicesSection />
       <HighlightBannerSection />
@@ -29,8 +29,8 @@ export default function Home() {
       <SupportSection />
       <FaqSection />
       <ClosingCtaSection />
-      <NewsletterSection />
       <ContactSection />
+      <NewsletterSection />
       <FooterSection />
     </main>
   );
