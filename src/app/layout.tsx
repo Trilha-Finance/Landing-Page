@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Chakra_Petch, JetBrains_Mono } from "next/font/google";
+import { CookieConsentProvider } from "../components/cookie-consent";
+import { AnalyticsScripts } from "../components/analytics-scripts";
 import "./globals.css";
 
 const inter = Inter({
@@ -31,7 +33,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${inter.variable} ${chakraPetch.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-bg-base font-sans text-text-primary">
-        {children}
+        <CookieConsentProvider>
+          {children}
+          <AnalyticsScripts />
+        </CookieConsentProvider>
       </body>
     </html>
   );

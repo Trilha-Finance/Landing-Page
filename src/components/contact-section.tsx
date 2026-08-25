@@ -1,9 +1,26 @@
-import { SectionLabel } from "./chrome";
+"use client";
+
+import { useState, type FormEvent } from "react";
+import { PrivacyConsentCheckbox, SectionLabel } from "./chrome";
 
 const FIELD_CLASS =
   "h-12 w-full border border-border-line bg-bg-pure px-5 text-base text-text-primary outline-none placeholder:text-text-secondary/60 transition-colors duration-[200ms] ease-in-out hover:border-neon/40 focus:border-neon";
 
 export function ContactSection() {
+  const [consent, setConsent] = useState(false);
+  const [consentError, setConsentError] = useState(false);
+
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (!consent) {
+      setConsentError(true);
+      return;
+    }
+    setConsentError(false);
+    // TODO: integrar com backend/serviço externo de envio — ver CLAUDE.md (nada é
+    // persistido neste repo).
+  }
+
   return (
     <section id="contato" className="relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(49,87,255,0.06),transparent_60%)]" />
@@ -18,7 +35,7 @@ export function ContactSection() {
           </p>
         </div>
 
-        <form className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-12 lg:gap-6">
+        <form onSubmit={handleSubmit} className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-12 lg:gap-6">
           <div className="space-y-2 lg:col-span-6">
             <label
               htmlFor="full-name"
@@ -107,6 +124,18 @@ export function ContactSection() {
               className={`h-[168px] resize-none py-4 ${FIELD_CLASS}`}
             />
           </div>
+          <div className="lg:col-span-12">
+            <PrivacyConsentCheckbox
+              id="contact-privacy-consent"
+              checked={consent}
+              onChange={(v) => {
+                setConsent(v);
+                if (v) setConsentError(false);
+              }}
+              error={consentError}
+            />
+          </div>
+
           <div className="flex justify-center pt-2 lg:col-span-12">
             <button
               type="submit"

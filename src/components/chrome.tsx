@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { CheckIcon } from "./icons";
 
 export function SectionLabel({
   index,
@@ -83,6 +84,59 @@ export function PrimaryButton({
         ↗
       </span>
     </a>
+  );
+}
+
+export function PrivacyConsentCheckbox({
+  id,
+  checked,
+  onChange,
+  error,
+}: {
+  id: string;
+  checked: boolean;
+  onChange: (value: boolean) => void;
+  error?: boolean;
+}) {
+  return (
+    <div className="space-y-2">
+      <label htmlFor={id} className="flex cursor-pointer items-start gap-3">
+        <span
+          className={`relative mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center border bg-bg-pure ${
+            error ? "border-red-600" : checked ? "border-neon" : "border-border-line"
+          }`}
+        >
+          <input
+            id={id}
+            type="checkbox"
+            checked={checked}
+            onChange={(e) => onChange(e.target.checked)}
+            aria-required="true"
+            aria-invalid={error || undefined}
+            aria-describedby={error ? `${id}-error` : undefined}
+            className="absolute inset-0 h-full w-full cursor-pointer opacity-0"
+          />
+          {checked && <CheckIcon className="h-3.5 w-3.5 text-neon" aria-hidden />}
+        </span>
+        <span className="text-sm leading-6 text-text-secondary">
+          Li e concordo com a{" "}
+          <a
+            href="/politica-de-privacidade"
+            target="_blank"
+            rel="noreferrer"
+            className="text-text-primary underline underline-offset-2 hover:text-neon"
+          >
+            Política de Privacidade
+          </a>
+          .
+        </span>
+      </label>
+      {error && (
+        <p id={`${id}-error`} role="alert" className="pl-8 text-xs text-red-600">
+          É necessário concordar com a Política de Privacidade pra enviar o formulário.
+        </p>
+      )}
+    </div>
   );
 }
 

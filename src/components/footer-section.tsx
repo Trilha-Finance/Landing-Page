@@ -1,3 +1,7 @@
+"use client";
+
+import { ManageCookiesButton } from "./cookie-consent";
+
 export function FooterSection() {
   return (
     <footer className="w-full border-t border-border-line bg-bg-pure text-text-secondary">
@@ -77,13 +81,13 @@ export function FooterSection() {
         <section className="flex flex-col gap-4 py-10 font-[family-name:var(--font-mono)] text-[11px] uppercase tracking-wide text-text-secondary md:flex-row md:items-center md:justify-between">
           <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
             <a
-              href="#"
+              href="/politica-de-privacidade"
               className="transition-colors duration-[200ms] ease-in-out hover:text-neon"
             >
-              Políticas de Privacidade
+              Política de Privacidade
             </a>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
-              {["Termos de Uso", "Cookies", "LGPD"].map((item) => (
+              {["Termos de Uso", "LGPD"].map((item) => (
                 <a
                   key={item}
                   href="#"
@@ -92,6 +96,7 @@ export function FooterSection() {
                   {item}
                 </a>
               ))}
+              <ManageCookiesButton className="transition-colors duration-[200ms] ease-in-out hover:text-neon" />
             </div>
           </div>
 
