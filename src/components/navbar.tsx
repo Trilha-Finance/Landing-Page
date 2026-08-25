@@ -48,7 +48,7 @@ export function Navbar() {
           aria-expanded={open}
           aria-controls="mobile-menu"
           onClick={() => setOpen((v) => !v)}
-          className="flex h-11 w-11 shrink-0 items-center justify-center border border-black text-black md:hidden"
+          className="flex h-11 w-11 shrink-0 items-center justify-center border border-white text-white md:hidden"
         >
           {open ? <CloseIcon className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
         </button>

@@ -81,3 +81,22 @@ body {
 .animate-cybr-scan {
   animation: cybr-scan 4s linear infinite;
 }
+
+@keyframes cybr-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-cybr-marquee {
+  animation: cybr-marquee 60s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-cybr-marquee {
+    animation: none;
+  }
+}

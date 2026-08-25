@@ -11,6 +11,7 @@ import { PillarsSection } from "../components/pillars-section";
 import { ServicesSection } from "../components/services-section";
 import { StatementSection } from "../components/statement-section";
 import { SupportSection } from "../components/support-section";
+import { TechMarqueeSection } from "../components/tech-marquee-section";
 import { TestimonialsSection } from "../components/testimonials-section";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
     <main className="w-full bg-bg-base text-text-primary">
       <Navbar />
       <HeroSection />
+      <TechMarqueeSection />
       <PillarsSection />
       <StatementSection />
       <ApproachSection />

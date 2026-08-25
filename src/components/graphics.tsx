@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CornerMarks } from "./chrome";
+import { ChartIcon } from "./icons";
 import heroTerminal from "../assets/hero/wireframe-terminal.png";
 
 const BARCODE_HEIGHTS = [14, 22, 10, 26, 16, 12, 24, 18, 10, 20];
@@ -89,6 +90,28 @@ export function HeroPortrait() {
       </span>
 
       <CornerMarks />
+    </div>
+  );
+}
+
+// Placeholder até termos uma ilustração wireframe encomendada no mesmo estilo dos outros
+// serviços (ver src/assets/services/) — trocar por Image quando o asset existir.
+export function DataAnalyticsGraphic({ className = "" }: { className?: string }) {
+  return (
+    <div className={`relative flex h-full w-full items-center justify-center overflow-hidden bg-bg-pure ${className}`}>
+      <div
+        aria-hidden
+        className="absolute inset-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(var(--border-line) 1px, transparent 1px), linear-gradient(90deg, var(--border-line) 1px, transparent 1px)",
+          backgroundSize: "14px 14px",
+        }}
+      />
+      <ChartIcon className="relative h-24 w-24 text-neon" />
+      <span className="absolute bottom-3 right-3 font-[family-name:var(--font-mono)] text-[9px] uppercase tracking-wide text-text-secondary">
+        {"//DATA_VIZ"}
+      </span>
     </div>
   );
 }
