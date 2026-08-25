@@ -1,57 +1,77 @@
-import { ChainIcon, WealthIcon } from "./icons";
-import { SectionLabel, SecondaryButton } from "./chrome";
+import {
+  ClipboardIcon,
+  CodeIcon,
+  HeadsetIcon,
+  PackageIcon,
+  SearchIcon,
+  ShieldCheckIcon,
+} from "./icons";
+import { SectionLabel } from "./chrome";
 
 const APPROACH = [
   {
-    icon: WealthIcon,
-    title: "Finanças tradicionais",
-    items: [
-      "Planejamento financeiro pessoal e empresarial",
-      "Wealth planning e evolução pro planejamento patrimonial",
-      "Educação financeira com linguagem acessível",
-    ],
+    icon: SearchIcon,
+    title: "Descoberta",
+    description:
+      "Mergulhamos no seu negócio antes de propor qualquer solução — contexto, dores reais e prioridades, sem achismo.",
   },
   {
-    icon: ChainIcon,
-    title: "Tecnologia & Web3",
-    items: [
-      "Desenvolvimento de software sob demanda",
-      "Consultoria em blockchain e finanças descentralizadas",
-      "Conteúdo técnico aplicado ao dia a dia",
-    ],
+    icon: ClipboardIcon,
+    title: "Planejamento",
+    description:
+      "Escopo, arquitetura e prioridades no papel antes da primeira linha de código — cada etapa sabe pra onde vai.",
+  },
+  {
+    icon: CodeIcon,
+    title: "Desenvolvimento",
+    description:
+      "Construção com boas práticas e comunicação constante — sem caixa-preta entre você e o time técnico.",
+  },
+  {
+    icon: ShieldCheckIcon,
+    title: "Validação",
+    description:
+      "Teste, revisão e ajuste fino em cada entrega — bug em produção não entra no plano.",
+  },
+  {
+    icon: PackageIcon,
+    title: "Entrega",
+    description:
+      "Deploy estável, documentado e pronto pra operação — sem susto no dia de virar a chave.",
+  },
+  {
+    icon: HeadsetIcon,
+    title: "Suporte",
+    description:
+      "Acompanhamento depois do lançamento — manutenção, evolução e alguém pra chamar quando precisar.",
   },
 ];
 
 export function ApproachSection() {
   return (
     <section className="mx-auto w-full max-w-[1280px] px-6 py-20 sm:px-8 lg:px-10">
-      <div className="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
-        <div>
-          <SectionLabel index="02" label="Como atuamos" />
-          <h2 className="mt-4 max-w-md font-[family-name:var(--font-display)] font-bold text-3xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-4xl">
-            Duas frentes, uma trilha só.
-          </h2>
-        </div>
-        <SecondaryButton href="#servicos">Ver serviços</SecondaryButton>
+      <div className="mx-auto max-w-2xl text-center">
+        <SectionLabel index="02" label="Como atuamos" className="text-center" />
+        <h2 className="mt-4 font-[family-name:var(--font-display)] font-bold text-3xl uppercase leading-[0.95] tracking-tight text-text-primary sm:text-4xl">
+          Do papel à operação, passo a passo.
+        </h2>
       </div>
 
-      <div className="mt-12 grid grid-cols-1 gap-px bg-border-line md:grid-cols-2">
-        {APPROACH.map((column) => (
-          <div key={column.title} className="bg-bg-base p-8">
-            <span className="flex h-11 w-11 items-center justify-center border border-border-line text-neon">
-              <column.icon className="h-5 w-5" />
-            </span>
+      <div className="mt-12 grid grid-cols-1 gap-px bg-border-line sm:grid-cols-2 lg:grid-cols-3">
+        {APPROACH.map((step, i) => (
+          <div key={step.title} className="bg-bg-base p-8">
+            <div className="flex items-center justify-between">
+              <span className="flex h-11 w-11 items-center justify-center border border-border-line text-neon">
+                <step.icon className="h-5 w-5" />
+              </span>
+              <span className="font-[family-name:var(--font-mono)] text-[11px] uppercase tracking-wide text-text-secondary">
+                /{String(i + 1).padStart(2, "0")}
+              </span>
+            </div>
             <h3 className="mt-5 font-[family-name:var(--font-display)] font-medium text-xl uppercase text-text-primary">
-              {column.title}
+              {step.title}
             </h3>
-            <ul className="mt-5 space-y-3">
-              {column.items.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-sm leading-6 text-text-secondary">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-neon" />
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <p className="mt-3 text-sm leading-6 text-text-secondary">{step.description}</p>
           </div>
         ))}
       </div>

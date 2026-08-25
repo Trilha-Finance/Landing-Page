@@ -111,22 +111,3 @@ export function TrailIcon({ className }: { className?: string }) {
   );
 }
 
-export function BannerGraphic() {
-  return (
-    <div className="relative mx-auto flex h-40 w-full max-w-xs items-center justify-center border border-border-line sm:h-48">
-      <div
-        aria-hidden
-        className="absolute inset-0 opacity-[0.12]"
-        style={{
-          backgroundImage:
-            "linear-gradient(var(--border-line) 1px, transparent 1px), linear-gradient(90deg, var(--border-line) 1px, transparent 1px)",
-          backgroundSize: "20px 20px",
-        }}
-      />
-      <div className="absolute h-40 w-40 rounded-full bg-neon/10 blur-2xl" />
-      <span className="relative flex h-20 w-20 items-center justify-center border border-neon/50 text-neon">
-        <TrailIcon className="h-9 w-9" />
-      </span>
-    </div>
-  );
-}
