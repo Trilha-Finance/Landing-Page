@@ -1,7 +1,7 @@
 import { SectionLabel } from "./chrome";
 
 const FIELD_CLASS =
-  "h-12 w-full border border-border-line bg-black px-5 text-base text-white outline-none placeholder:text-white/40 transition-colors duration-[200ms] ease-in-out hover:border-neon/40 focus:border-neon";
+  "h-12 w-full border border-border-line bg-bg-pure px-5 text-base text-text-primary outline-none placeholder:text-text-secondary/60 transition-colors duration-[200ms] ease-in-out hover:border-neon/40 focus:border-neon";
 
 export function ContactSection() {
   return (

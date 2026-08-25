@@ -1,13 +1,3 @@
-import Image from "next/image";
-import { StatusDot } from "./chrome";
-
-const NODES = [
-  { label: "CTBA", top: "62%", left: "28%" },
-  { label: "SP", top: "72%", left: "34%" },
-  { label: "RJ", top: "68%", left: "38%" },
-  { label: "POA", top: "82%", left: "30%" },
-];
-
 export function FooterSection() {
   return (
     <footer className="w-full border-t border-border-line bg-bg-pure text-text-secondary">
@@ -15,37 +5,8 @@ export function FooterSection() {
         <section className="grid gap-14 border-b border-border-line pb-16 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:gap-x-20">
           <div className="space-y-6 lg:pr-16">
             <a href="#top" className="inline-flex items-center border border-border-line bg-white px-3 py-1.5">
-              
+
             </a>
-
-            <div className="relative h-24 w-full max-w-[280px] border border-border-line">
-              <div
-                aria-hidden
-                className="absolute inset-0 opacity-[0.15]"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(var(--border-line) 1px, transparent 1px), linear-gradient(90deg, var(--border-line) 1px, transparent 1px)",
-                  backgroundSize: "16px 16px",
-                }}
-              />
-              {NODES.map((node) => (
-                <span
-                  key={node.label}
-                  className="absolute flex -translate-x-1/2 -translate-y-1/2 items-center gap-1.5"
-                  style={{ top: node.top, left: node.left }}
-                >
-                  <span className="h-1.5 w-1.5 shrink-0 bg-neon" />
-                  <span className="font-[family-name:var(--font-mono)] text-[9px] uppercase tracking-wide text-text-secondary">
-                    {node.label}
-                  </span>
-                </span>
-              ))}
-            </div>
-
-            <p className="flex items-center gap-2 font-[family-name:var(--font-mono)] text-[11px] uppercase tracking-wide text-text-secondary">
-              <StatusDot />
-              Atendimento Operacional
-            </p>
           </div>
 
           <nav aria-label="Navigation" className="space-y-6">
@@ -141,15 +102,9 @@ export function FooterSection() {
         </section>
       </div>
 
-      <div
-        className="w-full border-t border-border-line py-3"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(-45deg, #000 0, #000 10px, var(--accent-neon) 10px, var(--accent-neon) 11px)",
-        }}
-      >
+      <div className="w-full border-t border-border-line bg-black py-3">
         <div className="mx-auto flex w-full max-w-[1280px] justify-center px-6 sm:px-8 lg:px-10">
-          <span className="bg-black px-4 py-1 font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.15em] text-neon">
+          <span className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-[0.15em] text-neon">
             &gt; ACCESS GRANTED_
           </span>
         </div>

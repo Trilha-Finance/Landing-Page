@@ -5,27 +5,52 @@ const FAQS = [
   {
     question: "O que a Trilha Finance faz?",
     answer:
-      "Juntamos duas frentes: finanças tradicionais (planejamento financeiro e wealth planning) e tecnologia (desenvolvimento de software e blockchain).",
+      "Somos uma software house com consultoria e educação em tecnologia: desenvolvimento de software, automação, IA, integrações, dados & analytics e blockchain/Web3 — além de treinamentos pra capacitar o time interno do cliente.",
   },
   {
-    question: "Vocês atendem pessoa física, empresas e o setor público?",
+    question: "Que tipo de empresa vocês atendem?",
     answer:
-      "Sim — trabalhamos com B2B, B2C e B2G, adaptando a linguagem e o escopo pra cada tipo de cliente.",
+      "Atendemos empresas de diferentes portes e segmentos, de startups e pequenos negócios a empresas de médio e grande porte. Adaptamos a solução ao objetivo e ao nível de maturidade tecnológica de cada cliente.",
   },
   {
-    question: "Vocês também desenvolvem software sob encomenda?",
+    question: "Como funciona o processo, do primeiro contato até a entrega?",
     answer:
-      "Sim, a frente de tecnologia cobre desenvolvimento de produtos digitais do primeiro protótipo à operação em produção.",
+      "Começa com uma conversa pra entender o problema e os objetivos do projeto. Depois fazemos o diagnóstico e definimos escopo, prioridades, tecnologias, cronograma e investimento. Com a proposta aprovada, entramos em desenvolvimento — mantendo você atualizado a cada etapa — até os testes, validação e entrega final.",
   },
   {
-    question: "A Trilha atua com criptomoedas e blockchain?",
+    question: "Como funciona o orçamento?",
     answer:
-      "Sim — é uma das nossas frentes principais, com conteúdo técnico e consultoria aplicada ao dia a dia, sem jargão desnecessário.",
+      "Cada projeto é avaliado individualmente. Depois de entender as necessidades e o escopo, montamos uma proposta personalizada considerando complexidade, funcionalidades, tecnologias, prazo e recursos necessários.",
+  },
+  {
+    question: "Quais as condições de pagamento?",
+    answer:
+      "Definimos de acordo com o escopo e o modelo do projeto — pode ser por etapas, projeto fechado ou recorrente, conforme o que fizer mais sentido pro seu caso.",
+  },
+  {
+    question: "Quanto tempo leva um projeto?",
+    answer:
+      "Depende da complexidade e da quantidade de funcionalidades. Projetos menores saem em algumas semanas; soluções mais robustas podem levar alguns meses. Depois do diagnóstico, você recebe um cronograma estimado.",
+  },
+  {
+    question: "Tem suporte depois que o projeto é entregue?",
+    answer:
+      "Sim. Depois da entrega, oferecemos suporte técnico, manutenção, correções, atualizações e evolução contínua — o modelo é combinado de acordo com a necessidade de cada cliente.",
+  },
+  {
+    question: "Posso acompanhar o projeto e pedir ajustes durante o desenvolvimento?",
+    answer:
+      "Sim. Mantemos etapas de validação ao longo do desenvolvimento pra você acompanhar e dar feedback. Ajustes dentro do escopo combinado entram no projeto normalmente; mudanças que ampliem bastante o escopo são avaliadas à parte.",
+  },
+  {
+    question: "Como funcionam os treinamentos e capacitações?",
+    answer:
+      "Além dos projetos, também ensinamos: cursos, workshops e capacitação sob medida pra quando o time interno do cliente precisa aprender a andar sozinho.",
   },
   {
     question: "Como faço pra começar?",
     answer:
-      "É só chamar a gente pelo formulário de contato abaixo — a partir daí entendemos o seu caso e indicamos o próximo passo.",
+      "É só chamar a gente pelo formulário de contato e contar sua ideia, problema ou necessidade. A gente analisa, entende os objetivos e indica os próximos passos — que costuma incluir uma reunião de descoberta e uma proposta personalizada.",
   },
 ];
 
