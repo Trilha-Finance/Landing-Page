@@ -1,18 +1,14 @@
-import Image, { type StaticImageData } from "next/image";
+import Image from "next/image";
 import { ArrowIcon } from "./icons";
 import { SectionLabel } from "./chrome";
-import { DataAnalyticsGraphic } from "./graphics";
 import desenvolvimentoSoftware from "../assets/services/desenvolvimento-software.png";
 import automacao from "../assets/services/automacao.png";
 import inteligenciaArtificial from "../assets/services/inteligencia-artificial.png";
 import integracoes from "../assets/services/integracoes.jpg";
 import tecnologia from "../assets/services/tecnologia.jpg";
+import dadosAnalytics from "../assets/services/dados-analytics.png";
 
-const SERVICES: Array<{
-  image?: StaticImageData;
-  title: string;
-  description: string;
-}> = [
+const SERVICES = [
   {
     image: desenvolvimentoSoftware,
     title: "Desenvolvimento de Software",
@@ -44,6 +40,7 @@ const SERVICES: Array<{
       "Consultoria técnica de ponta a ponta pra escolher, construir e manter a stack certa pro seu momento.",
   },
   {
+    image: dadosAnalytics,
     title: "Dados & Analytics",
     description:
       "Dado bruto disperso vira dashboard e indicador confiável — decisão rápida em vez de planilha manual.",
@@ -68,16 +65,12 @@ export function ServicesSection() {
                 <ArrowIcon className="h-4 w-4" />
               </span>
               <div className="relative mx-auto h-60 w-60 overflow-hidden">
-                {service.image ? (
-                  <Image
-                    src={service.image}
-                    alt={`Ilustração wireframe — ${service.title}`}
-                    fill
-                    className="object-cover"
-                  />
-                ) : (
-                  <DataAnalyticsGraphic />
-                )}
+                <Image
+                  src={service.image}
+                  alt={`Ilustração wireframe — ${service.title}`}
+                  fill
+                  className="object-cover"
+                />
                 <span aria-hidden className="pointer-events-none absolute left-0 top-0 h-3 w-3 border-l-2 border-t-2 border-neon" />
                 <span aria-hidden className="pointer-events-none absolute right-0 top-0 h-3 w-3 border-r-2 border-t-2 border-neon" />
                 <span aria-hidden className="pointer-events-none absolute bottom-0 left-0 h-3 w-3 border-b-2 border-l-2 border-neon" />

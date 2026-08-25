@@ -60,17 +60,6 @@ export function BuildingIcon({ className }: IconProps) {
   );
 }
 
-export function ChartIcon({ className }: IconProps) {
-  return (
-    <svg {...base} className={className}>
-      <path d="M3 21h18" />
-      <path d="M5 21v-8M10.5 21v-12M16 21v-5M21 21v-9" />
-      <path d="M4 10.5 9 14l6-8 5 4" strokeDasharray="1 2.6" />
-      <circle cx="20" cy="10" r="1" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}
-
 export function SparkIcon({ className }: IconProps) {
   return (
     <svg {...base} className={className}>
