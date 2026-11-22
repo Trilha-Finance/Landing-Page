@@ -1,39 +1,36 @@
 import type { Metadata } from "next";
-import { Inter, Manrope, Geist_Mono } from "next/font/google";
+import { DM_Sans, Mona_Sans } from "next/font/google";
+import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
+import "@fortawesome/fontawesome-free/css/solid.min.css";
+import "@fortawesome/fontawesome-free/css/brands.min.css";
+import { CookieConsentBanner } from "@/components/cookies/cookie-consent";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const monaSans = Mona_Sans({
+  variable: "--font-mona-sans",
   subsets: ["latin"],
 });
 
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: "Trilha Finance",
-  description: "Premium SaaS / FinTech landing page footer",
+  description:
+    "Apoiamos fundadores e investidores com consultoria estratégica em venture capital, captação de recursos, due diligence e assessoria para crescimento.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
-      className={`${inter.variable} ${manrope.variable} ${geistMono.variable} h-full antialiased`}
+      lang="pt-BR"
+      className={`${monaSans.variable} ${dmSans.variable} antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#083C33] font-sans text-white">
+      <body>
         {children}
+        <CookieConsentBanner />
       </body>
     </html>
   );

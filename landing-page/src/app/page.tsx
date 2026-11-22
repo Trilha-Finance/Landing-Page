@@ -1,15 +1,23 @@
-import { ContactSection } from "../components/contact-section";
-import { FooterSection } from "../components/footer-section";
-import { Navbar } from "../components/navbar";
-import { NewsletterSection } from "../components/newsletter-section";
+import { About } from "@/components/sections/about";
+import { Contact } from "@/components/sections/contact";
+import { Faq } from "@/components/sections/faq";
+import { Hero } from "@/components/sections/hero";
+import { HowItWorks } from "@/components/sections/how-it-works";
+import { Footer } from "@/components/sections/footer";
+import { Services } from "@/components/sections/services";
+import { Values } from "@/components/sections/values";
 
 export default function Home() {
   return (
-    <main className="w-full bg-[#083C33] text-white">
-      <Navbar />
-      <ContactSection />
-      <NewsletterSection />
-      <FooterSection />
+    <main className="overflow-x-clip">
+      <Hero />
+      <About />
+      <Values />
+      <Services />
+      <HowItWorks />
+      <Contact />
+      <Faq />
+      <Footer />
     </main>
   );
 }
