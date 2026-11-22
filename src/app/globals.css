@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-page: #d9d9d9;
+  --color-brand: #0e3a37;
+  --color-brand-deep: #0b3130;
+  --color-brand-teal: #144443;
+  --color-lime: #c8f8a9;
+  --color-ink: #0b100d;
+  --color-muted: #646464;
+  --color-mist: #f2f5f1;
+
+  --font-heading: var(--font-mona-sans);
+  --font-body: var(--font-dm-sans);
+
+  --animate-marquee: marquee 30s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-body), sans-serif;
+}
+
+/* Section headings fade in letter by letter, as in the Figma capture. */
+.reveal-char {
+  display: inline-block;
+  opacity: 0.15;
+  transition: opacity 0.5s ease;
+}
+
+.is-revealed .reveal-char {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-char {
+    opacity: 1;
+    transition: none;
+  }
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
