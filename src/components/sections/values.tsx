@@ -56,7 +56,7 @@ const values: Value[] = [
   {
     number: "04",
     name: "Renovação",
-    text: "Revisamos o planejamento continuamente para acompanhar cada nova etapa da vida.",
+    text: "Revisamos o plano continuamente para acompanhar cada nova etapa da vida.",
     icon: (
       <>
         <path d="M19.5 12a7.5 7.5 0 0 1-13.1 5" />
@@ -68,7 +68,7 @@ const values: Value[] = [
   {
     number: "05",
     name: "Evolução",
-    text: "Buscamos crescimento consistente e sustentável, para você e para o seu patrimônio.",
+    text: "Buscamos crescimento consistente e sustentável, para indivíduos, famílias e empresas.",
     icon: (
       <>
         <path d="M3 20.5h18" />

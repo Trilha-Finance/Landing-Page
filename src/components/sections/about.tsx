@@ -15,7 +15,7 @@ const counters = [
     value: "29,6%",
     label: "Das famílias brasileiras estão com alguma parcela em atraso",
   },
-  { value: "+31%", label: "Dos brasileiros não possuem reserva financeira" },
+  { value: "31%", label: "Dos brasileiros não possuem reserva financeira" },
   {
     value: "60%",
     label: "Dos idosos chegam à terceira idade sem reserva financeira",
@@ -70,7 +70,7 @@ export function About() {
             </div>
             <p className="mx-auto mt-7 lg:mx-0 max-w-[635px] text-justify hyphens-auto text-base leading-[30.4px] text-muted">
               A Trilha Finance é dedicada ao planejamento financeiro e
-              patrimonial de pessoas físicas, famílias e empresas. Trabalhamos
+              patrimonial de indivíduos, famílias e empresas. Trabalhamos
               para que cada cliente construa patrimônio de forma saudável e
               sustentável, com um acompanhamento ativo e responsivo, que
               acompanha as mudanças de cada etapa da vida pessoal e empresarial.

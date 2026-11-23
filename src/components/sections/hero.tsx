@@ -57,7 +57,7 @@ export function Hero() {
                 <span className="font-body text-[40px] font-semibold leading-10 text-white">99,3%</span>
                 <div className="flex flex-col gap-1">
                   <Image src="/images/hero/stars.png" alt="5 estrelas" width={80} height={15} />
-                  <span className="text-base leading-[30.4px] text-white">De retenção em nosso serviço de gestão patrimonial</span>
+                  <span className="text-base leading-[30.4px] text-white">De retenção em nossos serviços de planejamento patrimonial</span>
                 </div>
               </div>
             </div>

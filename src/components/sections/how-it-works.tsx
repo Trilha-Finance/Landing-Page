@@ -19,14 +19,14 @@ const steps = [
   {
     number: "03",
     title: "Implementação",
-    text: "Montamos o seu planejamento e o colocamos em prática ao seu lado. Do diagnóstico ao acompanhamento",
+    text: "Montamos o seu planejamento e o colocamos em prática. Do diagnóstico ao acompanhamento",
     icon: "fa-handshake",
     circle: "bg-brand text-lime",
   },
   {
     number: "04",
     title: "Acompanhamento",
-    text: "Revisamos o plano periodicamente e ajustamos a rota sempre que a sua vida ou o mercado mudarem.",
+    text: "Revisamos o plano periodicamente e ajustamos a rota sempre que a sua vida ou seus objetivos mudarem.",
     icon: "fa-arrows-rotate",
     circle: "bg-lime text-brand",
   },

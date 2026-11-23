@@ -7,7 +7,7 @@ import { SectionBadge } from "@/components/ui/section-badge";
 const faqs: { q: string; a: ReactNode }[] = [
   {
     q: "O que é a Trilha Finance e como ela pode ajudar?",
-    a: "A Trilha Finance é uma empresa independente de planejamento financeiro e patrimonial. O trabalho consiste em entender os objetivos de cada cliente, mapear o patrimônio e construir, em conjunto, um plano para chegar aonde se deseja. O atendimento abrange pessoas físicas, famílias e empresas, com remuneração prioritariamente fixa, para que as recomendações sejam guiadas pelos interesses do cliente.",
+    a: "A Trilha Finance é uma empresa de planejamento financeiro e patrimonial. O trabalho consiste em entender os objetivos de cada cliente, mapear o patrimônio e construir, em conjunto, um plano para chegar aonde se deseja. O atendimento abrange pessoas físicas, famílias e empresas, com remuneração prioritariamente fixa, para que as recomendações sejam guiadas pelos interesses do cliente.",
   },
   {
     q: "A Trilha Finance está vinculada a bancos, corretoras ou gestoras de investimentos?",
@@ -15,7 +15,7 @@ const faqs: { q: string; a: ReactNode }[] = [
   },
   {
     q: "A consulta de diagnóstico é gratuita?",
-    a: "Sim. A primeira reunião de diagnóstico é gratuita e sem compromisso. Nela, são levantados os objetivos do cliente, mapeado o patrimônio e definido o perfil de risco. Assim, é possível conhecer a forma de trabalho da Trilha Finance e obter mais clareza sobre a situação atual antes de decidir seguir com o planejamento.",
+    a: "Sim. A primeira reunião de diagnóstico é gratuita e sem compromisso. Nela, são levantados os objetivos do cliente, mapeado o patrimônio e definido o perfil de risco. Assim, é possível você conhecer a forma de trabalho da Trilha Finance e obter mais clareza sobre a situação atual antes de decidir seguir com o planejamento.",
   },
   {
     q: "Qual é o investimento para contratar a consultoria e o planejamento financeiro?",
@@ -57,7 +57,7 @@ const faqs: { q: string; a: ReactNode }[] = [
 ];
 
 export function Faq() {
-  const [open, setOpen] = useState(0);
+  const [open, setOpen] = useState(-1);
 
   return (
     <section id="faq" className="px-3 pb-12 pt-[60px] md:px-5 md:pb-10">
