@@ -34,31 +34,10 @@ const legalLinks = [
   { label: "Política de Cookies", href: "/cookies" },
 ];
 
-/** Faint wireframe blob behind the footer content. */
-function WireBlob() {
-  return (
-    <svg
-      viewBox="0 0 400 400"
-      aria-hidden
-      className="pointer-events-none absolute left-[30%] top-10 -z-10 hidden w-[380px] rotate-12 text-white/10 md:block"
-    >
-      <g fill="none" stroke="currentColor" strokeWidth="1">
-        {Array.from({ length: 12 }, (_, i) => (
-          <ellipse key={`h${i}`} cx="200" cy="200" rx="180" ry={15 + i * 15} />
-        ))}
-        {Array.from({ length: 12 }, (_, i) => (
-          <ellipse key={`v${i}`} cx="200" cy="200" rx={15 + i * 15} ry="180" />
-        ))}
-      </g>
-    </svg>
-  );
-}
-
 export function Footer() {
   return (
     <footer id="footer" className="p-3 md:p-5">
       <div className="relative isolate overflow-hidden rounded-[30px] bg-[radial-gradient(ellipse_at_70%_50%,#1a3a2c_0%,#0b2723_45%,#08201d_100%)] px-6 md:rounded-[50px] md:px-10">
-        <WireBlob />
         <div className="mx-auto max-w-[1110px]">
           <div className="flex flex-wrap items-center justify-between gap-6 border-b border-white/10 pb-8 pt-12 md:pt-[70px]">
             <HashLink
@@ -115,7 +94,7 @@ export function Footer() {
 
             <div>
               <h3 className="font-heading text-xl font-medium text-white">Navegação</h3>
-              <ul className="mt-6 grid grid-cols-2 gap-x-8 gap-y-[13px]">
+              <ul className="mt-6 grid grid-cols-1 gap-x-8 md:grid-cols-2 gap-y-[13px]">
                 {quickLinks.map((link) => (
                   <li key={link.label}>
                     <HashLink href={link.href} className="text-sm text-white transition-colors hover:text-lime">
@@ -141,7 +120,7 @@ export function Footer() {
           </div>
 
           <div className="flex flex-col items-center gap-5 py-10 md:flex-row md:justify-between">
-            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+            <ul className="flex flex-col items-center gap-y-2 md:flex-row md:flex-wrap md:justify-center md:gap-x-6">
               {legalLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-white/70 transition-colors hover:text-lime">

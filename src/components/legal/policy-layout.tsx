@@ -131,17 +131,17 @@ export function PolicySection({ id, number, title, children }: PolicySectionProp
           {title}
         </h2>
       </div>
-      <div className="mt-7 flex flex-col gap-5 text-base leading-[28px] text-muted [&_a]:text-brand [&_a]:underline [&_a]:underline-offset-2 [&_strong]:font-semibold [&_strong]:text-brand-deep">
+      <div className="mt-7 flex flex-col gap-3 text-base leading-[28px] text-muted [&>ol]:rounded-[20px] [&>ol]:bg-mist [&>ol]:p-5 [&>p]:rounded-[20px] [&>p]:bg-mist [&>p]:p-5 [&>ul]:rounded-[20px] [&>ul]:bg-mist [&>ul]:p-5 [&_a]:text-brand [&_a]:underline [&_a]:underline-offset-2 [&_strong]:font-semibold [&_strong]:text-brand-deep">
         {children}
       </div>
     </section>
   );
 }
 
-/** A numbered clause (e.g. "7.2"), with the number set apart in its own column. */
+/** A numbered clause (e.g. "7.2") in a gray card, with the number set apart in its own column. */
 export function Clause({ n, title, children }: { n: string; title?: string; children: ReactNode }) {
   return (
-    <div className="grid gap-1 md:grid-cols-[56px_1fr] md:gap-4">
+    <div className="grid gap-1 rounded-[20px] bg-mist p-5 md:grid-cols-[48px_1fr] md:gap-4">
       <span className="font-heading text-sm font-medium text-brand/60 tabular-nums md:pt-1">{n}</span>
       <div className="flex flex-col gap-3">
         {title && <h3 className="font-heading text-lg font-semibold text-brand-deep">{title}</h3>}
@@ -168,7 +168,7 @@ export function CheckList({ items }: { items: ReactNode[] }) {
 /** Two-column term/description rows, used for legal bases and retention periods. */
 export function TermTable({ head, rows }: { head: [string, string]; rows: [ReactNode, ReactNode][] }) {
   return (
-    <div className="overflow-hidden rounded-[20px] border border-black/[0.06]">
+    <div className="overflow-hidden rounded-[20px] border border-black/[0.06] bg-white">
       <div className="hidden grid-cols-[minmax(0,2fr)_minmax(0,3fr)] bg-mist px-6 py-3 font-heading text-sm tracking-[1.2px] text-brand uppercase md:grid md:gap-6">
         <span>{head[0]}</span>
         <span>{head[1]}</span>

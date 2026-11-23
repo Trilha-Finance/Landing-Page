@@ -90,7 +90,7 @@ export function Services() {
         <div className="px-5 pt-16 text-center md:px-10 md:pt-[100px]">
           <SectionBadge variant="dark">Nossos Serviços</SectionBadge>
           <RevealHeading
-            text="Acompanhamento especializado para famílias e empresários em todas as etapas do planejamento financeiro"
+            text="Acompanhamento especializado para indivíduos, famílias e empresários em todas as etapas do planejamento financeiro"
             className="mx-auto mt-[3px] max-w-[1180px] font-heading text-4xl font-semibold leading-tight text-white md:text-[56px] md:leading-[67px]"
           />
         </div>
