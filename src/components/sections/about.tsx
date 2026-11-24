@@ -18,7 +18,7 @@ const counters = [
   { value: "31%", label: "Dos brasileiros não possuem reserva financeira" },
   {
     value: "60%",
-    label: "Das pessoas chegam à terceira idade sem reserva financeira",
+    label: "60% dos brasileiros chegam à terceira idade sem reserva de emergência",
   },
 ];
 
