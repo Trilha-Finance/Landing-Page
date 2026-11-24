@@ -37,7 +37,7 @@ export function Hero() {
 
           <p className="mt-8 text-base leading-[30.4px] text-white md:mt-10">
             <span className="lg:block lg:whitespace-nowrap">
-              Wealth Planning para famílias e empresários: olhamos para o seu patrimônio pessoal{" "}
+              Wealth Planning para indivíduos, famílias e empresários: olhamos para o seu patrimônio pessoal{" "}
             </span>
             <span className="lg:block lg:whitespace-nowrap">
               e para o da sua empresa como um todo, para planejar, investir, proteger e crescer, em uma só trilha.
